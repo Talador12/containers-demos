@@ -1,0 +1,28 @@
+{
+  "name": "secrets-store-container-demo",
+  "version": "1.0.0",
+  "description": "Cloudflare Secrets Store integration with Container class demo",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "@cloudflare/containers": "latest"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231218.0",
+    "typescript": "^5.0.0",
+    "wrangler": "^3.0.0"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "containers",
+    "secrets-store",
+    "security"
+  ],
+  "author": "Cloudflare",
+  "license": "MIT"
+}
