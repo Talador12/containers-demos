@@ -1,0 +1,30 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "container-exec-demo",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-04-03",
+	"containers": [{
+		"image": "./Dockerfile",
+		"class_name": "ExecContainer",
+		"max_instances": 1
+	}],
+	"durable_objects": {
+		"bindings": [
+			{
+				"class_name": "ExecContainer",
+				"name": "EXEC_CONTAINER"
+			}
+		]
+	},
+	"migrations": [
+		{
+			"new_sqlite_classes": [
+				"ExecContainer"
+			],
+			"tag": "v1"
+		}
+	],
+	"observability": {
+		"enabled": true
+	}
+}
