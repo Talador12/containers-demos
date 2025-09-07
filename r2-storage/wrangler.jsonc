@@ -1,0 +1,36 @@
+{
+	"name": "r2-storage-demo",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-04-03",
+	"containers": [{
+		"image": "./Dockerfile",
+		"class_name": "R2StorageContainer",
+		"max_instances": 2
+	}],
+	"r2_buckets": [
+		{
+			"binding": "DATA_BUCKET",
+			"bucket_name": "my-demo-data-bucket"
+		},
+		{
+			"binding": "LOGS_BUCKET", 
+			"bucket_name": "my-demo-logs-bucket"
+		}
+	],
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "R2_STORAGE_CONTAINER",
+				"class_name": "R2StorageContainer"
+			}
+		]
+	},
+	"migrations": [
+		{
+			"new_sqlite_classes": [
+				"R2StorageContainer"
+			],
+			"tag": "v1"
+		}
+	]
+}

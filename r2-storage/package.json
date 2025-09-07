@@ -1,0 +1,20 @@
+{
+	"name": "r2-storage-demo",
+	"version": "1.0.0",
+	"description": "R2 Storage Container Demo - Shows R2 bucket directory mounting",
+	"main": "src/index.ts",
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy",
+		"build": "tsc"
+	},
+	"dependencies": {
+		"@cloudflare/containers": "latest",
+		"express": "^4.18.2"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20240909.0",
+		"typescript": "^5.0.0",
+		"wrangler": "^3.78.2"
+	}
+}
