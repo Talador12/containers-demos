@@ -1,0 +1,17 @@
+{
+  "name": "kv-storage-demo",
+  "version": "1.0.0",
+  "description": "Cloudflare Container demo for KV storage integration",
+  "scripts": {
+    "dev": "wrangler dev --local",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@cloudflare/containers": "^0.0.28"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250620.0",
+    "typescript": "^5.0.0",
+    "wrangler": "^3.0.0"
+  }
+}

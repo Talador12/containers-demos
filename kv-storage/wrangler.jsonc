@@ -1,0 +1,38 @@
+{
+  "name": "kv-storage-demo",
+  "main": "src/index.ts",
+  "compatibility_date": "2024-12-01",
+  "workflows": [
+    {
+      "binding": "KV_WORKFLOW",
+      "name": "kv-workflow",
+      "class_name": "KvWorkflow"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "KV_CONTAINER",
+        "class_name": "KvContainer"
+      }
+    ]
+  },
+  "kv_namespaces": [
+    {
+      "binding": "DEMO_CACHE",
+      "id": "your-kv-namespace-id-here",
+      "preview_id": "your-preview-kv-namespace-id-here"
+    },
+    {
+      "binding": "USER_SESSIONS",
+      "id": "your-sessions-kv-namespace-id-here", 
+      "preview_id": "your-sessions-preview-kv-namespace-id-here"
+    }
+  ],
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_classes": ["KvContainer"]
+    }
+  ]
+}
