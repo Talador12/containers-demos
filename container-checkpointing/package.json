@@ -1,0 +1,30 @@
+{
+  "name": "container-checkpointing-demo",
+  "version": "1.0.0",
+  "description": "Cloudflare Container Checkpointing Demo",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "wrangler deploy --dry-run",
+    "tail": "wrangler tail",
+    "types": "wrangler types"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "containers",
+    "checkpointing",
+    "durable-objects"
+  ],
+  "dependencies": {
+    "@cloudflare/containers": "latest"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240909.0",
+    "wrangler": "^3.75.0"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

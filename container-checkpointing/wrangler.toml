@@ -1,0 +1,21 @@
+name = "container-checkpointing"
+main = "src/index.ts"
+compatibility_date = "2024-09-02"
+
+[[durable_objects]]
+bindings = [
+  { name = "CHECKPOINT_DEMO", class_name = "CheckpointDemoContainer" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["CheckpointDemoContainer"]
+
+[[r2_buckets]]
+binding = "CHECKPOINT_BUCKET"
+bucket_name = "container-checkpoints"
+
+[containers]
+[[containers.bindings]]
+name = "CHECKPOINT_DEMO"
+image = "./container-app/Dockerfile"
