@@ -1,0 +1,25 @@
+{
+	"name": "hello-workflow",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-04-03",
+	"migrations": [{
+		"tag": "v1",
+		"new_classes": ["HelloContainer"]
+	}],
+	"containers": [{
+		"image": "./Dockerfile",
+		"class_name": "HelloContainer",
+		"ports": ["8080:8080"]
+	}],
+	"durable_objects": {
+		"bindings": [{
+			"class_name": "HelloContainer",
+			"name": "HELLO_CONTAINER"
+		}]
+	},
+	"workflows": [{
+		"name": "hello-workflow",
+		"binding": "HELLO_WORKFLOW",
+		"class_name": "HelloWorkflow"
+	}]
+}
