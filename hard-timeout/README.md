@@ -91,7 +91,7 @@ timeout: 120      // 120 seconds (number)
 
 ## Implementation Notes
 
-- Timeout starts when container first starts, not on each request
+- Uses workerd's native `hardTimeout` option instead of alarms
+- Timeout starts when container starts, not per request
 - Uses `destroy()` by default for immediate termination
-- Integrates with existing alarm system for efficient timeout checking
-- Takes priority over soft timeout when both would trigger simultaneously
+- Takes priority over soft timeout when both would trigger
